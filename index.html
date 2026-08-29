@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Living Parallax | Interactive Gallery</title>
+    <title>Ingeniería & ciencia de datos | L. Tamayo</title>
+    
+    <link rel="icon" href="icono.png?v=2" type="Static/dat_.png">
+    <link rel="apple-touch-icon" href="Static/dat_.png?v=2">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -22,8 +26,8 @@
     <!-- Header -->
 <header class="ui-element">
     <div class="brand-container">
-        <div class="logo">LUIS FELIPE TAMAYO</div>
-        <div class="subtitle">Ingeniería & Data BI</div>
+        <div class="logo">Ingeniería & Data BI</div>
+        <div class="subtitle">Felipe Tamayo C.</div>
     </div>
     
     <nav id="mainNav">
@@ -43,132 +47,135 @@
     </div>
 </header>
 
-    <!-- Slider -->
-    <div class="slider-wrapper">
-        <div class="slider-container" id="slider">
-            <!-- Slide 1 -->
-            <div class="slide active" data-index="0">
-                <div class="parallax-layer background-layer">
-                    <img src="images/mountain-dreams.jpg" alt="Mountains">
-                </div>
-                <div class="image-info ui-element">
-                    <h2>Data Pipelines & Procesos ETL/ELT</h2>
-                    <p>Diseño, implementación y orquestación de flujos de datos automatizados para la integración de múltiples fuentes transaccionales.</p>
-                    <p>Manejo y consolidación masiva de volúmenes de datos de hasta 100 TB mensuales en entornos multi-región.</p>
-                    
-                </div>
-            </div>
+<div class="slider-wrapper">
+    <div class="slider-container" id="slider">
 
-            <!-- Slide 2 -->
-            <div class="slide" data-index="1">
-                <div class="parallax-layer background-layer">
-                    <img src="images/forest-whispers.jpg" alt="Forest">
-                </div>
-                <div class="image-info ui-element">
-                    <h2>Forest Whispers</h2>
-                    <p>Nature's secrets hidden in emerald depths, where tranquility meets adventure</p>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="slide" data-index="2">
-                <div class="parallax-layer background-layer">
-                    <img src="images/ocean-serenity.jpg" alt="Ocean">
-                </div>
-                <div class="image-info ui-element">
-                    <h2>Ocean Serenity</h2>
-                    <p>Endless horizons where waves meet wonder, painting the perfect escape</p>
-                </div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="slide" data-index="3">
-                <div class="parallax-layer background-layer">
-                    <img src="images/golden-hour.jpg" alt="Sunset">
-                </div>
-                <div class="image-info ui-element">
-                    <h2>Golden Hour</h2>
-                    <p>When the world glows with magical light, transforming every moment</p>
-                </div>
-            </div>
-
-            <!-- Slide 5 -->
-            <div class="slide" data-index="4">
-                <div class="parallax-layer background-layer">
-                    <img src="images/spring-bloom.jpg" alt="Flowers">
-                </div>
-                <div class="image-info ui-element">
-                    <h2>Spring Bloom</h2>
-                    <p>Life awakens in vibrant colors, celebrating nature's renewal</p>
-                </div>
-            </div>
-
-            <!-- Slide 6 -->
-            <div class="slide" data-index="5">
-                <div class="parallax-layer background-layer">
-                    <img src="images/desert-vastness.jpg" alt="Desert">
-                </div>
-                <div class="image-info ui-element">
-                    <h2>Desert Vastness</h2>
-                    <p>Endless dunes sculpted by wind and time, a landscape of pure beauty</p>
-                </div>
-            </div>
-
-            <!-- Slide 7 -->
-            <div class="slide" data-index="6">
-                <div class="parallax-layer background-layer">
-                    <img src="images/waterfall-majesty.jpg" alt="Waterfall">
-                </div>
-                <div class="image-info ui-element">
-                    <h2>Waterfall Majesty</h2>
-                    <p>Cascading power and grace, where water carves its eternal path</p>
-                </div>
-            </div>
-
-            <!-- Slide 8 -->
-            <div class="slide" data-index="7">
-                <div class="parallax-layer background-layer">
-                    <img src="images/wild-encounters.jpg" alt="Wildlife">
-                </div>
-                <div class="image-info ui-element">
-                    <h2>Wild Encounters</h2>
-                    <p>Nature's inhabitants in their pristine habitat, untamed and free</p>
-                </div>
-            </div>
-
-            <!-- Slide 9 -->
-            <div class="slide" data-index="8">
-                <div class="parallax-layer background-layer">
-                    <img src="images/summit-glory.jpg" alt="Mountain Peak">
-                </div>
-                <div class="image-info ui-element">
-                    <h2>Summit Glory</h2>
-                    <p>Standing above the clouds, where adventure meets achievement</p>
-                </div>
-            </div>
-
-            <!-- Navigation -->
-            <div class="nav-arrow prev ui-element">‹</div>
-            <div class="nav-arrow next ui-element">›</div>
-
-            <!-- Dots -->
-            <div class="dots-container ui-element">
-                <span class="dot active" data-slide="0"></span>
-                <span class="dot" data-slide="1"></span>
-                <span class="dot" data-slide="2"></span>
-                <span class="dot" data-slide="3"></span>
-                <span class="dot" data-slide="4"></span>
-                <span class="dot" data-slide="5"></span>
-                <span class="dot" data-slide="6"></span>
-                <span class="dot" data-slide="7"></span>
-                <span class="dot" data-slide="8"></span>
-            </div>
+    <!-- Slide 1: Data Pipelines -->
+    <div class="slide active" data-index="0">
+        <div class="parallax-layer background-layer">
+            <img src="images/pipelines-bg.jpg" alt="Data Pipelines">
+        </div>
+        <div class="image-info ui-element">
+            <h2>Data pipelines y procesos ETL/ELT</h2>
+            <p>Diseño y automatización de pipelines para integrar, transformar y disponibilizar datos de múltiples fuentes en plataformas analíticas y de negocio.</p>
+            <p><strong>Stack:</strong> Azure Data Factory · Microsoft Fabric · AWS Glue · Azure Databricks · PySpark · Python · SQL</p>
         </div>
     </div>
 
-    <!-- Global Parallax Shapes -->
-    <div class="parallax-shape shape-1 ui-element"></div>
-    <div class="parallax-shape shape-2 ui-element"></div>
+    <!-- Slide 2: Data Warehousing -->
+    <div class="slide" data-index="1">
+        <div class="parallax-layer background-layer">
+            <img src="images/warehouse-bg.jpg" alt="Data Warehousing">
+        </div>
+        <div class="image-info ui-element">
+            <h2>Data warehousing y modelado de datos</h2>
+            <p>Diseño de modelos de datos, estructuras analíticas y Data Warehouses orientados a rendimiento, escalabilidad y consumo de información.</p>
+            <p><strong>Stack:</strong> Microsoft Fabric · Azure Synapse Analytics · SQL Server · Azure SQL · Amazon Redshift · SQL · Power BI</p>
+        </div>
+    </div>
+
+    <!-- Slide 3: Data Lake -->
+    <div class="slide" data-index="2">
+        <div class="parallax-layer background-layer">
+            <img src="images/datalakehouse-bg.jpg" alt="Data Lake">
+        </div>
+        <div class="image-info ui-element">
+            <h2>Data Lake y arquitecturas Lakehouse</h2>
+            <p>Implementación de arquitecturas modernas para centralizar, almacenar y procesar grandes volúmenes de datos estructurados y no estructurados.</p>
+            <p><strong>Stack:</strong> Microsoft Fabric · OneLake · Azure Data Lake Storage · Amazon S3 · Azure Databricks · Apache Spark · Delta Lake</p>
+        </div>
+    </div>
+
+    <!-- Slide 4: Business Intelligence -->
+    <div class="slide" data-index="3">
+        <div class="parallax-layer background-layer">
+            <img src="images/dashboards-bg.jpg" alt="Business Intelligence">
+        </div>
+        <div class="image-info ui-element">
+            <h2>Inteligencia de negocios y análisis de datos</h2>
+            <p>Transformación de datos en indicadores, modelos analíticos y tableros interactivos para la toma de decisiones estratégicas y operativas.</p>
+            <p><strong>Stack:</strong> Power BI · DAX · Power Query · Microsoft Fabric · SQL · Azure Synapse Analytics · AWS QuickSight</p>
+        </div>
+    </div>
+
+    <!-- Slide 5: Data Quality -->
+    <div class="slide" data-index="4">
+        <div class="parallax-layer background-layer">
+            <img src="images/quality-bg.jpg" alt="Data Quality">
+        </div>
+        <div class="image-info ui-element">
+            <h2>Calidad y gobierno de datos</h2>
+            <p>Implementación de procesos para asegurar la calidad, consistencia, trazabilidad y disponibilidad de los datos durante todo su ciclo de vida.</p>
+            <p><strong>Stack:</strong> Microsoft Fabric · Microsoft Purview · Azure Data Factory · SQL · Python · Power BI</p>
+        </div>
+    </div>
+
+    <!-- Slide 6: Machine Learning -->
+    <div class="slide" data-index="5">
+        <div class="parallax-layer background-layer">
+            <img src="images/ml-bg.jpg" alt="Machine Learning">
+        </div>
+        <div class="image-info ui-element">
+            <h2>Machine Learning y análisis predictivo</h2>
+            <p>Desarrollo de modelos de machine learning para clasificación, predicción, detección de patrones y generación de insights sobre datos operativos y de negocio.</p>
+            <p><strong>Stack:</strong> Python · Pandas · NumPy · Scikit-learn · XGBoost · Azure Machine Learning · Azure Databricks · PySpark</p>
+        </div>
+    </div>
+
+    <!-- Slide 7: IA & NLP -->
+    <div class="slide" data-index="6">
+        <div class="parallax-layer background-layer">
+            <img src="images/nlp-bg.jpg" alt="Modelos de IA">
+        </div>
+        <div class="image-info ui-element">
+            <h2>Modelos de IA con énfasis PLN</h2>
+            <p>Aplicación de técnicas de inteligencia artificial y procesamiento de lenguaje natural para extraer información, clasificar contenido y automatizar el análisis de datos.</p>
+            <p><strong>Stack:</strong> Python · Transformers · Hugging Face · Azure AI · Azure OpenAI · NLP · Azure Databricks</p>
+        </div>
+    </div>
+
+    <!-- Slide 8: Advanced Analytics -->
+    <div class="slide" data-index="7">
+        <div class="parallax-layer background-layer">
+            <img src="images/predictive-bg.jpg" alt="Análisis Avanzado">
+        </div>
+        <div class="image-info ui-element">
+            <h2>Análisis avanzado y detección de anomalías</h2>
+            <p>Análisis estadístico y desarrollo de soluciones para identificar comportamientos atípicos, tendencias y oportunidades de mejora a partir de grandes volúmenes de datos.</p>
+            <p><strong>Stack:</strong> Python · Pandas · NumPy · Scikit-learn · PySpark · Azure Databricks · Power BI</p>
+        </div>
+    </div>
+
+    <!-- Slide 9: Data Integration -->
+    <div class="slide" data-index="8">
+        <div class="parallax-layer background-layer">
+            <img src="images/api-bg.jpg" alt="Data Integration">
+        </div>
+        <div class="image-info ui-element">
+            <h2>Data Integration & API Automation</h2>
+            <p>Integración de fuentes de datos y servicios mediante APIs y procesos automatizados para conectar aplicaciones, plataformas y sistemas empresariales.</p>
+            <p><strong>Stack:</strong> Python · REST APIs · FastAPI · Azure Functions · AWS Lambda · Azure Data Factory · Power Automate · SQL</p>
+        </div>
+    </div>
+
+    <div class="nav-arrow prev ui-element">‹</div>
+    <div class="nav-arrow next ui-element">›</div>
+
+    <div class="dots-container ui-element">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+        <span class="dot" data-slide="2"></span>
+        <span class="dot" data-slide="3"></span>
+        <span class="dot" data-slide="4"></span>
+        <span class="dot" data-slide="5"></span>
+        <span class="dot" data-slide="6"></span>
+        <span class="dot" data-slide="7"></span>
+        <span class="dot" data-slide="8"></span>
+    </div>
+
+    </div> <!-- Cierre de slider-container -->
+</div> <!-- Cierre de slider-wrapper -->
+
 
     <!-- Play/Pause Button -->
     <button class="play-pause-btn ui-element" id="playPauseBtn" aria-label="Play/Pause Slideshow">
@@ -185,26 +192,18 @@
     <!-- Duration Controls -->
     <div class="duration-controls ui-element">
         <button class="duration-btn" id="decreaseDuration" aria-label="Decrease Duration">−</button>
-        <div class="duration-display" id="durationDisplay">5<span>s</span></div>
+        <div class="duration-display" id="durationDisplay">8<span>s</span></div>
         <button class="duration-btn" id="increaseDuration" aria-label="Increase Duration">+</button>
     </div>
 
-    <!-- About Overlay -->
     <div class="overlay" id="aboutOverlay">
         <div class="overlay-content">
             <button class="close-btn" onclick="closeOverlay('about')">×</button>
-            <h2>About Us</h2>
-            <p>Welcome to Living Parallax, where visual storytelling meets cutting-edge design. We believe in the power of images to inspire, captivate, and transport viewers to extraordinary places.</p>
-            <p>Our mission is to showcase the world's most breathtaking landscapes and moments through an immersive, interactive experience. Each image is carefully curated to evoke emotion and wonder, utilizing parallax scrolling technology to create depth and movement that brings photography to life.</p>
-            <p>Every scroll reveals new perspectives, every movement adds dimension, and every image tells a story waiting to be discovered.</p>
-            <p>Take control of your time with <a href="https://timermo.com" rel="nofollow" target="_blank">TimerMo</a> today. Bring your designs to life with <a href="https://www.vectorsticker.com" rel="nofollow" target="_blank">VectorSticker</a> resources.</p>
-            <p>Living Parallax is a free HTML template designed by <a href="https://www.tooplate.com" target="_blank" rel="nofollow noopener">Tooplate</a> for creating stunning fullscreen image galleries.</p>
-            <p>UI toggle button to hide/show all interface elements for distraction-free viewing</p>
-            <p>Keyboard navigation (Arrow keys for slides, H key for UI toggle)</p>
-            <p>Auto-play controls with play/pause functionality</p>
-            <p>Smooth overlay panels for About, Testimonials, and Contact sections</p>
-            <p>Beautiful stock photography provided by <a href="https://unsplash.com" target="_blank" rel="nofollow noopener">Unsplash</a>, enhanced with interactive parallax effects and customizable slideshow timing.</p>
-            <img src="images/about-mountain.jpg" alt="Mountain landscape" class="overlay-image">
+            <h2>Acerca de</h2>
+            <p>Este sitio hace parte del perfil profesional de <strong>Felipe Tamayo — Ingeniero Electrónico en Automatización, especialista en Datos y candidato a Máster en Ciencia de Datos.</strong></p>
+            <p><strong>Sobre mi:</strong> Tengo experiencia en las áreas de <strong>Ingeniería de Datos, Ciencia de Datos y Business Intelligence</strong>, participo en proyectos de integración y transformación de datos, construcción de pipelines y Data Warehouses, analítica avanzada, machine learning, automatización y desarrollo de soluciones analíticas sobre ecosistemas <strong>Azure y AWS</strong>.</p>
+            <p>Mi modo de trabajo es flexible, sin embargo, normalmente lo hago bajo un <strong>enfoque orientado a proyectos</strong>, tanto para organizaciones en Colombia como para iniciativas internacionales, colaborando con empresas, equipos multidisciplinarios y clientes bajo diferentes modalidades. También estoy disponible para <strong>proyectos independientes y colaborativos</strong> incluyendo investigación aplicada, despliegue de soluciones, automatización y asesoría técnica.</p>
+            <p>Si no es la primera vez que me visitas, es posible que encuentres limitado acceso al <strong>Git</strong> de los proyectos. Debido a la migración de GitLab a Github estos se estarán restableciendo mientras se hace revision y actualización.</p>
         </div>
     </div>
 
