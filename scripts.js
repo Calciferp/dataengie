@@ -334,9 +334,6 @@ function updateDuration(e) {
     (e.stopPropagation(), updateDuration(currentDuration + 1));
   }));
 let uiVisible = !0;
-const uiToggleBtn = document.getElementById("uiToggleBtn"),
-  eyeIcon = document.getElementById("eyeIcon");
-uiToggleBtn.title = "Hide UI Elements (Press H)";
 const eyeOpenPath =
     '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>',
   eyeClosedPath =
@@ -344,15 +341,4 @@ const eyeOpenPath =
 uiToggleBtn.addEventListener("click", (e) => {
   (e.preventDefault(), e.stopPropagation());
   const t = document.querySelectorAll(".ui-element");
-  uiVisible
-    ? (t.forEach((e) => e.classList.add("hidden")),
-      (uiVisible = !1),
-      uiToggleBtn.classList.add("ui-hidden"),
-      (eyeIcon.innerHTML = eyeClosedPath),
-      (uiToggleBtn.title = "Show UI Elements (Press H)"))
-    : (t.forEach((e) => e.classList.remove("hidden")),
-      (uiVisible = !0),
-      uiToggleBtn.classList.remove("ui-hidden"),
-      (eyeIcon.innerHTML = eyeOpenPath),
-      (uiToggleBtn.title = "Hide UI Elements (Press H)"));
 });

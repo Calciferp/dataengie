@@ -15,14 +15,6 @@
 
 </head>
 <body>
-    <!-- UI Toggle Button - Always Visible -->
-    <button class="ui-toggle-btn" id="uiToggleBtn" aria-label="Toggle UI Visibility">
-        <svg viewBox="0 0 24 24" id="eyeIcon">
-            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-            <circle cx="12" cy="12" r="3"/>
-        </svg>
-    </button>
-
     <!-- Header -->
 <header class="ui-element">
     <div class="brand-container">
@@ -32,7 +24,7 @@
     
     <nav id="mainNav">
         <a onclick="openOverlay('about')">Acerca de</a>
-        <a onclick="openOverlay('testimonials')">Proyectos</a>
+        <a onclick="openOverlay('projects')">Proyectos</a>
         <a onclick="openOverlay('contact')">Contacto</a>
         <button class="fullscreen-btn" id="fullscreenBtn" aria-label="Toggle Fullscreen">
             <svg viewBox="0 0 24 24">
@@ -53,7 +45,7 @@
     <!-- Slide 1: Data Pipelines -->
     <div class="slide active" data-index="0">
         <div class="bg-layer background-layer">
-            <img src="images/pipelines-bg.jpg" alt="Data Pipelines">
+            <img src="Static/images/pipelines-bg.jpg" alt="Data Pipelines">
         </div>
         <div class="image-info ui-element">
             <h2>Data pipelines y procesos ETL/ELT</h2>
@@ -65,7 +57,7 @@
     <!-- Slide 2: Data Warehousing -->
     <div class="slide" data-index="1">
         <div class="bg-layer background-layer">
-            <img src="images/warehouse-bg.jpg" alt="Data Warehousing">
+            <img src="Static/images/warehouse-bg.jpg" alt="Data Warehousing">
         </div>
         <div class="image-info ui-element">
             <h2>Data warehousing y modelado de datos</h2>
@@ -77,7 +69,7 @@
     <!-- Slide 3: Data Lake -->
     <div class="slide" data-index="2">
         <div class="bg-layer background-layer">
-            <img src="images/datalakehouse-bg.jpg" alt="Data Lake">
+            <img src="Static/images/datalakehouse-bg.jpg" alt="Data Lake">
         </div>
         <div class="image-info ui-element">
             <h2>Data Lake y arquitecturas Lakehouse</h2>
@@ -89,7 +81,7 @@
     <!-- Slide 4: Business Intelligence -->
     <div class="slide" data-index="3">
         <div class="bg-layer background-layer">
-            <img src="images/dashboards-bg.jpg" alt="Business Intelligence">
+            <img src="Static/images/dashboards-bg.jpg" alt="Business Intelligence">
         </div>
         <div class="image-info ui-element">
             <h2>Inteligencia de negocios y análisis de datos</h2>
@@ -101,7 +93,7 @@
     <!-- Slide 5: Data Quality -->
     <div class="slide" data-index="4">
         <div class="bg-layer background-layer">
-            <img src="images/quality-bg.jpg" alt="Data Quality">
+            <img src="Static/images/quality-bg.jpg" alt="Data Quality">
         </div>
         <div class="image-info ui-element">
             <h2>Calidad y gobierno de datos</h2>
@@ -113,7 +105,7 @@
     <!-- Slide 6: Machine Learning -->
     <div class="slide" data-index="5">
         <div class="bg-layer background-layer">
-            <img src="images/ml-bg.jpg" alt="Machine Learning">
+            <img src="Static/images/ml-bg.jpg" alt="Machine Learning">
         </div>
         <div class="image-info ui-element">
             <h2>Machine Learning y análisis predictivo</h2>
@@ -125,7 +117,7 @@
     <!-- Slide 7: IA & NLP -->
     <div class="slide" data-index="6">
         <div class="bg-layer background-layer">
-            <img src="images/nlp-bg.jpg" alt="Modelos de IA">
+            <img src="Static/images/nlp-bg.jpg" alt="Modelos de IA">
         </div>
         <div class="image-info ui-element">
             <h2>Modelos de IA con énfasis PLN</h2>
@@ -137,7 +129,7 @@
     <!-- Slide 8: Advanced Analytics -->
     <div class="slide" data-index="7">
         <div class="bg-layer background-layer">
-            <img src="images/predictive-bg.jpg" alt="Análisis Avanzado">
+            <img src="Static/images/predictive-bg.jpg" alt="Análisis Avanzado">
         </div>
         <div class="image-info ui-element">
             <h2>Análisis avanzado y detección de anomalías</h2>
@@ -149,7 +141,7 @@
     <!-- Slide 9: Data Integration -->
     <div class="slide" data-index="8">
         <div class="bg-layer background-layer">
-            <img src="images/api-bg.jpg" alt="Data Integration">
+            <img src="Static/images/api-bg.jpg" alt="Data Integration">
         </div>
         <div class="image-info ui-element">
             <h2>Data Integration & API Automation</h2>
@@ -203,34 +195,36 @@
             <p>Este sitio hace parte del perfil profesional de <strong>Felipe Tamayo — Ingeniero Electrónico en Automatización, especialista en Datos y candidato a Máster en Ciencia de Datos.</strong></p>
             <p><strong>Sobre mi:</strong> Tengo experiencia en las áreas de <strong>Ingeniería de Datos, Ciencia de Datos y Business Intelligence</strong>, participo en proyectos de integración y transformación de datos, construcción de pipelines y Data Warehouses, analítica avanzada, machine learning, automatización y desarrollo de soluciones analíticas sobre ecosistemas <strong>Azure y AWS</strong>.</p>
             <p>Mi modo de trabajo es flexible, sin embargo, normalmente lo hago bajo un <strong>enfoque orientado a proyectos</strong>, tanto para organizaciones en Colombia como para iniciativas internacionales, colaborando con empresas, equipos multidisciplinarios y clientes bajo diferentes modalidades. También estoy disponible para <strong>proyectos independientes y colaborativos</strong> incluyendo investigación aplicada, despliegue de soluciones, automatización y asesoría técnica.</p>
-            <p>Si no es la primera vez que me visitas, es posible que encuentres limitado acceso al <strong>Git</strong> de los proyectos. Debido a la migración de GitLab a Github estos se estarán restableciendo mientras se hace revision y actualización.</p>
+            <p>Si visitaste el sitio antes y buscas alguno de los proyectos, es posible que encuentres limitado acceso al <strong>Git.</strong> Debido a la migración de GitLab hacia GitHub se está haciendo una revisión y actualización, posteriormente se estará restableciendo el acceso.</p>
         </div>
     </div>
 
-    <!-- Testimonials Overlay -->
-    <div class="overlay" id="testimonialsOverlay">
+    <!-- Projects Overlay -->
+    <div class="overlay" id="projectsOverlay">
         <div class="overlay-content">
-            <button class="close-btn" onclick="closeOverlay('testimonials')">×</button>
-            <h2>Testimonials</h2>
+            <button class="close-btn" onclick="closeOverlay('projects')">×</button>
+            <h2>Proyectos</h2>
             
+            <!-- Tarjeta del Proyecto NLP -->
             <div class="testimonial-card">
-                <p>"This gallery is absolutely stunning! The dynamic visual effect adds such an immersive quality to the images. I found myself scrolling through multiple times just to experience the smooth transitions and beautiful photography."</p>
-                <p class="author">Sarah Mitchell, Photography Enthusiast</p>
+                <h3 style="color: #f8fafc; margin-bottom: 10px;">Motor de Análisis de Sentimientos (NLP)</h3>
+                <p>Desarrollo de un sistema basado en procesamiento de lenguaje natural (Hugging Face / FastAPI) para clasificar y analizar el sentimiento de textos no estructurados en tiempo real.</p>
+                <!-- Botón Ampliar apuntando al archivo generado -->
+                <a href="projectNLP.html" class="ampliar-btn">Ampliar</a>
             </div>
 
+            <!-- Tarjeta Proyecto 2 (Ejemplo de relleno) -->
             <div class="testimonial-card">
-                <p>"As a web designer, I'm always looking for inspiration. This gallery perfectly balances aesthetics with functionality. The responsive design works flawlessly on all my devices, and the user experience is simply outstanding."</p>
-                <p class="author">James Rodriguez, Web Designer</p>
+                <h3 style="color: #f8fafc; margin-bottom: 10px;">Data Lakehouse en Azure</h3>
+                <p>Diseño y construcción de una arquitectura Medallion (Bronce, Plata, Oro) utilizando Azure Databricks y Delta Lake para el manejo de más de 100 TB de datos mensuales.</p>
+                <a href="projectLakehouse.html" class="ampliar-btn">Ampliar</a>
             </div>
 
+            <!-- Tarjeta Proyecto 3 (Ejemplo de relleno) -->
             <div class="testimonial-card">
-                <p>"I've seen many photo galleries online, but none compare to this one. The attention to detail, the smooth animations, and the curated selection of images make this a truly memorable experience. Highly recommended!"</p>
-                <p class="author">Emily Chen, Creative Director</p>
-            </div>
-
-            <div class="testimonial-card">
-                <p>"The combination of stunning visuals and innovative technology creates something truly special. Each image feels alive with the smooth movement. It's like stepping into the photographs themselves."</p>
-                <p class="author">Michael Thompson, Nature Photographer</p>
+                <h3 style="color: #f8fafc; margin-bottom: 10px;">Automatización de Pipelines ETL/ELT</h3>
+                <p>Orquestación de flujos de datos complejos integrando múltiples APIs REST con bases de datos y plataformas de BI utilizando Microsoft Fabric y Azure Data Factory.</p>
+                <a href="projectETL.html" class="ampliar-btn">Ampliar</a>
             </div>
         </div>
     </div>
@@ -265,31 +259,6 @@
                 <a href="tel:+573152949118">+57 (315) 294 9118</a> | <a href="mailto:tamayoc.felipe@gmail.com">tamayoc.felipe@gmail.com</a></p>
             </div>
             
-        </div>
-    </div>
-
-    <!-- Privacy Overlay -->
-    <div class="overlay" id="privacyOverlay">
-        <div class="overlay-content">
-            <button class="close-btn" onclick="closeOverlay('privacy')">×</button>
-            <h2>Privacy Policy</h2>
-            <p>Here, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines how we collect, use, and safeguard your data when you visit our website.</p>
-            
-            <p><strong>Information We Collect:</strong> We may collect personal information such as your name, email address, and any other details you provide when contacting us through our website forms. We also collect non-personal information such as browser type, IP address, and pages visited for analytics purposes.</p>
-            
-            <p><strong>How We Use Your Information:</strong> The information we collect is used to respond to your inquiries, improve our website experience, and send occasional updates about our gallery (only if you've opted in). We never sell, trade, or rent your personal information to third parties.</p>
-            
-            <p><strong>Data Security:</strong> We implement industry-standard security measures to protect your personal information from unauthorized access, disclosure, or misuse. All form submissions are transmitted securely.</p>
-            
-            <p><strong>Cookies:</strong> Our website may use cookies to enhance user experience and track website analytics. You can disable cookies in your browser settings, though this may affect certain website functionalities.</p>
-            
-            <p><strong>Third-Party Services:</strong> We use Unsplash for image hosting, which may have its own privacy policies. We recommend reviewing their terms if you have concerns about image content.</p>
-            
-            <p><strong>Your Rights:</strong> You have the right to access, correct, or delete any personal information we hold about you. To exercise these rights, please contact us through our contact form.</p>
-            
-            <p><strong>Changes to This Policy:</strong> We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
-            
-            <p>If you have any questions about this Privacy Policy, please don't hesitate to contact us.</p>
         </div>
     </div>
 
