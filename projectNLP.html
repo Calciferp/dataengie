@@ -15,12 +15,14 @@
     <style>
         /* Estilos específicos para las páginas de detalle de proyectos */
         body {
-            /* Mantiene la paleta oscura de la página principal */
-            background-color: #0b0f19;
+            /* Mantiene la paleta oscura alineada a la página principal */
+            background-color: #000;
             color: #e2e8f0;
             display: flex;
             justify-content: center;
-            padding: 40px 20px;
+            align-items: flex-start; /* Evita que el contenedor se centre verticalmente si es muy corto */
+            padding: 120px 20px 40px; /* Padding top aumentado a 120px para dejar espacio al header fijo */
+            min-height: 100vh;
         }
         
         .project-detail-container {
@@ -105,11 +107,36 @@
         @media (max-width: 768px) {
             .project-detail-container { padding: 25px; }
             .project-title { font-size: 2rem; }
-            body { padding: 20px 10px; }
+            body { padding: 100px 10px 20px; }
         }
     </style>
 </head>
 <body>
+
+    <!-- Header integrado del sitio principal -->
+    <header class="ui-element" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);">
+        <div class="brand-container">
+            <div class="logo">Ingeniería & Data BI</div>
+            <div class="subtitle">Luis Felipe Tamayo C.</div>
+        </div>
+        
+        <nav id="mainNav">
+            <!-- Enlaces dirigidos de vuelta a index.html donde están los overlays -->
+            <a href="index.html">Acerca de</a>
+            <a href="index.html">Proyectos</a>
+            <a href="index.html">Contacto</a>
+            <button class="fullscreen-btn" id="fullscreenBtn" aria-label="Toggle Fullscreen">
+                <svg viewBox="0 0 24 24">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                </svg>
+            </button>
+        </nav>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
 
     <div class="project-detail-container">
         <!-- Botón para regresar al index -->
@@ -139,6 +166,8 @@
             <p>La implementación de esta solución de IA automatizó el 85% del triaje manual inicial de comunicaciones. Además, al integrar la inferencia del modelo directamente en los tableros analíticos, se habilitó la detección temprana de anomalías en la satisfacción del cliente, permitiendo respuestas proactivas ante picos de sentimientos negativos.</p>
         </div>
     </div>
-
+    
+    <!-- Enlace a tu script si requieres funcionalidad en el menú móvil de esta vista -->
+    <script src="scripts.js"></script>
 </body>
 </html>
