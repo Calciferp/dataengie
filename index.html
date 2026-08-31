@@ -201,30 +201,55 @@
 
     <!-- Projects Overlay -->
     <div class="overlay" id="projectsOverlay">
-        <div class="overlay-content">
+        <div class="overlay-content" id="projectsOverlayContent">
             <button class="close-btn" onclick="closeOverlay('projects')">×</button>
-            <h2>Proyectos</h2>
-            
-            <!-- Tarjeta del Proyecto NLP -->
-            <div class="testimonial-card">
-                <h3 style="color: #f8fafc; margin-bottom: 10px;">Motor de Análisis de Sentimientos (NLP)</h3>
-                <p>Desarrollo de un sistema basado en procesamiento de lenguaje natural (Hugging Face / FastAPI) para clasificar y analizar el sentimiento de textos no estructurados en tiempo real.</p>
-                <!-- Botón Ampliar apuntando al archivo generado -->
-                <a href="projectNLP.html" class="ampliar-btn">Ampliar</a>
+
+            <!-- Vista de lista de proyectos -->
+            <div id="projectsListView">
+                <h2>Proyectos</h2>
+
+                <!-- Tarjeta del Proyecto NLP -->
+                <div class="testimonial-card">
+                    <h3 style="color: #f8fafc; margin-bottom: 10px;">Motor de Análisis de Sentimientos (NLP)</h3>
+                    <p>Desarrollo de un sistema basado en procesamiento de lenguaje natural (Hugging Face / FastAPI) para clasificar y analizar el sentimiento de textos no estructurados en tiempo real.</p>
+                    <a onclick="showProjectDetail('nlp')" class="ampliar-btn">Ampliar</a>
+                </div>
+
+                <!-- Tarjeta Proyecto 2 (Ejemplo de relleno) -->
+                <div class="testimonial-card">
+                    <h3 style="color: #f8fafc; margin-bottom: 10px;">Data Lakehouse en Azure</h3>
+                    <p>Diseño y construcción de una arquitectura Medallion (Bronce, Plata, Oro) utilizando Azure Databricks y Delta Lake para el manejo de más de 100 TB de datos mensuales.</p>
+                    <a onclick="showProjectDetail('lakehouse')" class="ampliar-btn">Ampliar</a>
+                </div>
+
+                <!-- Tarjeta Proyecto 3 (Ejemplo de relleno) -->
+                <div class="testimonial-card">
+                    <h3 style="color: #f8fafc; margin-bottom: 10px;">Automatización de Pipelines ETL/ELT</h3>
+                    <p>Orquestación de flujos de datos complejos integrando múltiples APIs REST con bases de datos y plataformas de BI utilizando Microsoft Fabric y Azure Data Factory.</p>
+                    <a onclick="showProjectDetail('etl')" class="ampliar-btn">Ampliar</a>
+                </div>
             </div>
 
-            <!-- Tarjeta Proyecto 2 (Ejemplo de relleno) -->
-            <div class="testimonial-card">
-                <h3 style="color: #f8fafc; margin-bottom: 10px;">Data Lakehouse en Azure</h3>
-                <p>Diseño y construcción de una arquitectura Medallion (Bronce, Plata, Oro) utilizando Azure Databricks y Delta Lake para el manejo de más de 100 TB de datos mensuales.</p>
-                <a href="projectLakehouse.html" class="ampliar-btn">Ampliar</a>
-            </div>
+            <!-- Vista de detalle de proyecto (se llena dinámicamente) -->
+            <div id="projectDetailView" class="project-detail-view">
+                <button class="back-to-projects" onclick="backToProjects()">← Volver a proyectos</button>
 
-            <!-- Tarjeta Proyecto 3 (Ejemplo de relleno) -->
-            <div class="testimonial-card">
-                <h3 style="color: #f8fafc; margin-bottom: 10px;">Automatización de Pipelines ETL/ELT</h3>
-                <p>Orquestación de flujos de datos complejos integrando múltiples APIs REST con bases de datos y plataformas de BI utilizando Microsoft Fabric y Azure Data Factory.</p>
-                <a href="projectETL.html" class="ampliar-btn">Ampliar</a>
+                <div class="project-detail-grid">
+                    <div class="project-detail-main">
+                        <img id="pdHero" class="project-hero-img" src="" alt="">
+                        <div id="pdSections"></div>
+                    </div>
+
+                    <aside class="project-detail-sidebar">
+                        <span id="pdTag" class="category-tag"></span>
+                        <h3 id="pdName" class="sidebar-title"></h3>
+                        <div id="pdDate" class="sidebar-date"></div>
+                        <div class="sidebar-stack">
+                            <h4>Stack</h4>
+                            <div id="pdStackList" class="stack-pills"></div>
+                        </div>
+                    </aside>
+                </div>
             </div>
         </div>
     </div>

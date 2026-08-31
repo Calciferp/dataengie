@@ -2,172 +2,20 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto de PLN | L. Tamayo</title>
-    
-    <link rel="icon" href="icono.png?v=2" type="Static/dat_.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    
-    <style>
-        /* Estilos específicos para las páginas de detalle de proyectos */
-        body {
-            /* Mantiene la paleta oscura alineada a la página principal */
-            background-color: #000;
-            color: #e2e8f0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* Evita que el contenedor se centre verticalmente si es muy corto */
-            padding: 120px 20px 40px; /* Padding top aumentado a 120px para dejar espacio al header fijo */
-            min-height: 100vh;
-        }
-        
-        .project-detail-container {
-            max-width: 900px;
-            width: 100%;
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 16px;
-            padding: 40px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        }
-
-        .back-link {
-            display: inline-block;
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: 500;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
-            transition: color 0.3s ease;
-        }
-
-        .back-link:hover {
-            color: #7dd3fc;
-        }
-
-        .project-title {
-            font-size: 2.8rem;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            color: #ffffff;
-            line-height: 1.2;
-        }
-
-        .project-date {
-            color: #94a3b8;
-            font-size: 1rem;
-            margin-bottom: 25px;
-            font-weight: 400;
-        }
-
-        .project-stack {
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            color: #38bdf8;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            margin-bottom: 35px;
-            display: inline-block;
-        }
-
-        .project-hero-img {
-            width: 100%;
-            height: auto;
-            max-height: 450px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .project-content h3 {
-            font-size: 1.5rem;
-            color: #f8fafc;
-            margin-top: 35px;
-            margin-bottom: 15px;
-            border-left: 4px solid #38bdf8;
-            padding-left: 12px;
-        }
-
-        .project-content p {
-            line-height: 1.8;
-            color: #cbd5e1;
-            font-size: 1.05rem;
-            margin-bottom: 20px;
-        }
-
-        /* Responsividad */
-        @media (max-width: 768px) {
-            .project-detail-container { padding: 25px; }
-            .project-title { font-size: 2rem; }
-            body { padding: 100px 10px 20px; }
-        }
-    </style>
+    <title>Redirigiendo... | L. Tamayo</title>
+    <meta http-equiv="refresh" content="0; url=index.html?project=nlp">
+    <script>
+        // Redirección inmediata a la página integrada. El detalle del proyecto
+        // ahora vive dentro de index.html (overlay de Proyectos), para que
+        // Acerca de / Proyectos / Contacto sigan disponibles sin recargas
+        // ni tiempos de espera.
+        window.location.replace("index.html?project=nlp");
+    </script>
 </head>
-<body>
-
-    <!-- Header integrado del sitio principal -->
-    <header class="ui-element" style="background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);">
-        <div class="brand-container">
-            <div class="logo">Ingeniería & Data BI</div>
-            <div class="subtitle">Luis Felipe Tamayo C.</div>
-        </div>
-        
-        <nav id="mainNav">
-            <!-- Enlaces dirigidos de vuelta a index.html donde están los overlays -->
-            <a href="index.html">Acerca de</a>
-            <a href="index.html">Proyectos</a>
-            <a href="index.html">Contacto</a>
-            <button class="fullscreen-btn" id="fullscreenBtn" aria-label="Toggle Fullscreen">
-                <svg viewBox="0 0 24 24">
-                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
-                </svg>
-            </button>
-        </nav>
-        <div class="menu-toggle" id="menuToggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </header>
-
-    <div class="project-detail-container">
-        <!-- Botón para regresar al index -->
-        <a href="index.html" class="back-link">← Volver al portafolio</a>
-        
-        <!-- Cabecera del Proyecto -->
-        <h1 class="project-title">Motor de Análisis de Sentimientos y Clasificación de Textos</h1>
-        <div class="project-date">Agosto 2026</div>
-        
-        <div class="project-stack">
-            Stack: Python · Transformers · Hugging Face · Azure AI · FastAPI · Docker
-        </div>
-        
-        <!-- Imagen representativa -->
-        <img src="Static/images/nlp-bg.jpg" alt="Arquitectura del modelo NLP" class="project-hero-img" onerror="this.src='https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1200';">
-        
-        <!-- Contenido detallado -->
-        <div class="project-content">
-            <h3>Contexto y Desafío</h3>
-            <p>Con el crecimiento exponencial de las interacciones digitales de los usuarios, los equipos de soporte y análisis enfrentan el reto de procesar grandes volúmenes de texto no estructurado. El objetivo de este proyecto fue diseñar e implementar un sistema inteligente capaz de interpretar automáticamente tickets de servicio, correos y comentarios, categorizando cada mensaje y extrayendo el sentimiento subyacente (positivo, neutro, negativo) para priorizar la atención al cliente de manera dinámica.</p>
-            
-            <h3>Arquitectura y Solución Técnica</h3>
-            <p>El núcleo del motor predictivo se construyó utilizando modelos avanzados de procesamiento de lenguaje natural basados en la arquitectura <strong>Transformer</strong>. Específicamente, se realizó un proceso de <em>fine-tuning</em> sobre un modelo base de Hugging Face, entrenándolo con un corpus de datos históricos etiquetados del negocio.</p>
-            <p>Para asegurar la escalabilidad y disponibilidad de las predicciones en tiempo real, el modelo se expuso a través de una API RESTful desarrollada con <strong>FastAPI</strong>. Toda la solución se empaquetó en contenedores Docker y se orquestó utilizando los servicios de <strong>Azure AI</strong>, permitiendo una integración fluida con los pipelines de datos existentes y herramientas de Business Intelligence (BI) para el monitoreo de las métricas obtenidas.</p>
-            
-            <h3>Impacto y Resultados</h3>
-            <p>La implementación de esta solución de IA automatizó el 85% del triaje manual inicial de comunicaciones. Además, al integrar la inferencia del modelo directamente en los tableros analíticos, se habilitó la detección temprana de anomalías en la satisfacción del cliente, permitiendo respuestas proactivas ante picos de sentimientos negativos.</p>
-        </div>
-    </div>
-    
-    <!-- Enlace a tu script si requieres funcionalidad en el menú móvil de esta vista -->
-    <script src="scripts.js"></script>
+<body style="background:#000;color:#e2e8f0;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
+    <noscript>
+        <p>Este proyecto ahora está disponible en <a href="index.html?project=nlp" style="color:#38bdf8;">el portafolio principal</a>.</p>
+    </noscript>
+    <p>Redirigiendo al portafolio...</p>
 </body>
 </html>

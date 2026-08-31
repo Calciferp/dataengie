@@ -83,6 +83,11 @@ function stopProgressBar() {
   e && (e.style.width = "0%");
 }
 function openOverlay(e) {
+  // Cierra cualquier otro overlay abierto para que Acerca de / Proyectos / Contacto
+  // nunca queden encimados, sin importar desde dónde se abran.
+  document.querySelectorAll(".overlay.active").forEach((o) => {
+    if (o.id !== e + "Overlay") o.classList.remove("active");
+  });
   const t = document.getElementById(e + "Overlay");
   (t.classList.add("active"), clearInterval(autoPlayInterval));
   const n = t.querySelector(".overlay-content");
@@ -97,8 +102,141 @@ function openOverlay(e) {
 }
 function closeOverlay(e) {
   (document.getElementById(e + "Overlay").classList.remove("active"),
+    e === "projects" && backToProjects(),
     isPausedByUser || startAutoPlay());
 }
+
+/* ============================================================
+   Detalle de proyectos (integrado en la misma página, sin
+   navegar a archivos .html independientes ni recargar nada)
+   ============================================================ */
+const projectsData = {
+  nlp: {
+    name: "Motor de Análisis de Sentimientos y Clasificación de Textos",
+    date: "Agosto 2026",
+    category: "ml",
+    categoryLabel: "Machine Learning",
+    stack: ["Python", "Transformers", "Hugging Face", "Azure AI", "FastAPI", "Docker"],
+    hero: "Static/images/nlp-bg.jpg",
+    heroFallback: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1200",
+    sections: [
+      {
+        heading: "Contexto y Desafío",
+        paragraphs: [
+          "Con el crecimiento exponencial de las interacciones digitales de los usuarios, los equipos de soporte y análisis enfrentan el reto de procesar grandes volúmenes de texto no estructurado. El objetivo de este proyecto fue diseñar e implementar un sistema inteligente capaz de interpretar automáticamente tickets de servicio, correos y comentarios, categorizando cada mensaje y extrayendo el sentimiento subyacente (positivo, neutro, negativo) para priorizar la atención al cliente de manera dinámica.",
+        ],
+      },
+      {
+        heading: "Arquitectura y Solución Técnica",
+        paragraphs: [
+          "El núcleo del motor predictivo se construyó utilizando modelos avanzados de procesamiento de lenguaje natural basados en la arquitectura Transformer. Específicamente, se realizó un proceso de fine-tuning sobre un modelo base de Hugging Face, entrenándolo con un corpus de datos históricos etiquetados del negocio.",
+          "Para asegurar la escalabilidad y disponibilidad de las predicciones en tiempo real, el modelo se expuso a través de una API RESTful desarrollada con FastAPI. Toda la solución se empaquetó en contenedores Docker y se orquestó utilizando los servicios de Azure AI, permitiendo una integración fluida con los pipelines de datos existentes y herramientas de Business Intelligence (BI) para el monitoreo de las métricas obtenidas.",
+        ],
+      },
+      {
+        heading: "Impacto y Resultados",
+        paragraphs: [
+          "La implementación de esta solución de IA automatizó el 85% del triaje manual inicial de comunicaciones. Además, al integrar la inferencia del modelo directamente en los tableros analíticos, se habilitó la detección temprana de anomalías en la satisfacción del cliente, permitiendo respuestas proactivas ante picos de sentimientos negativos.",
+        ],
+      },
+    ],
+  },
+  lakehouse: {
+    name: "Data Lakehouse en Azure",
+    date: "2026",
+    category: "data",
+    categoryLabel: "Ingeniería de Datos",
+    stack: ["Azure Databricks", "Delta Lake", "OneLake", "Microsoft Fabric", "PySpark", "Apache Spark"],
+    hero: "Static/images/datalakehouse-bg.jpg",
+    heroFallback: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+    sections: [
+      {
+        heading: "Descripción del proyecto",
+        paragraphs: [
+          "Diseño y construcción de una arquitectura Medallion (Bronce, Plata, Oro) utilizando Azure Databricks y Delta Lake para el manejo de más de 100 TB de datos mensuales, centralizando el almacenamiento y procesamiento de datos estructurados y no estructurados provenientes de múltiples fuentes.",
+        ],
+      },
+    ],
+  },
+  etl: {
+    name: "Automatización de Pipelines ETL/ELT",
+    date: "2026",
+    category: "data",
+    categoryLabel: "Ingeniería de Datos",
+    stack: ["Microsoft Fabric", "Azure Data Factory", "REST APIs", "SQL", "Power Automate"],
+    hero: "Static/images/pipelines-bg.jpg",
+    heroFallback: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80&w=1200",
+    sections: [
+      {
+        heading: "Descripción del proyecto",
+        paragraphs: [
+          "Orquestación de flujos de datos complejos integrando múltiples APIs REST con bases de datos y plataformas de BI utilizando Microsoft Fabric y Azure Data Factory, automatizando procesos que antes requerían intervención manual entre sistemas.",
+        ],
+      },
+    ],
+  },
+};
+
+function showProjectDetail(id) {
+  const data = projectsData[id];
+  if (!data) return;
+
+  document.getElementById("projectsListView").style.display = "none";
+  const detail = document.getElementById("projectDetailView");
+  detail.classList.add("active");
+  const overlayBox = document.getElementById("projectsOverlayContent");
+  if (overlayBox) overlayBox.classList.add("project-detail-mode");
+
+  const tag = document.getElementById("pdTag");
+  tag.textContent = data.categoryLabel;
+  tag.className = "category-tag " + data.category;
+
+  document.getElementById("pdName").textContent = data.name;
+  document.getElementById("pdDate").textContent = data.date;
+  document.getElementById("pdStackList").innerHTML = data.stack
+    .map((s) => `<span class="stack-pill">${s}</span>`)
+    .join("");
+
+  const hero = document.getElementById("pdHero");
+  hero.src = data.hero;
+  hero.alt = data.name;
+  hero.onerror = function () {
+    this.onerror = null;
+    this.src = data.heroFallback || "";
+  };
+
+  document.getElementById("pdSections").innerHTML = data.sections
+    .map(
+      (sec) =>
+        `<h3>${sec.heading}</h3>` +
+        sec.paragraphs.map((p) => `<p>${p}</p>`).join("")
+    )
+    .join("");
+
+  const scrollBox = document.getElementById("projectsOverlayContent");
+  if (scrollBox) scrollBox.scrollTop = 0;
+}
+
+function backToProjects() {
+  document.getElementById("projectDetailView").classList.remove("active");
+  document.getElementById("projectsListView").style.display = "block";
+  const scrollBox = document.getElementById("projectsOverlayContent");
+  if (scrollBox) {
+    scrollBox.scrollTop = 0;
+    scrollBox.classList.remove("project-detail-mode");
+  }
+}
+
+// Enlace directo: permite abrir un proyecto puntual (ej. index.html?project=nlp)
+// sin depender de un archivo .html independiente por proyecto.
+(function initDeepLinkProject() {
+  const params = new URLSearchParams(window.location.search);
+  const projectId = params.get("project");
+  if (projectId && projectsData[projectId]) {
+    openOverlay("projects");
+    showProjectDetail(projectId);
+  }
+})();
     
 async function handleSubmit(e) {
     e.preventDefault();
