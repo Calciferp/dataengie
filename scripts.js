@@ -107,36 +107,38 @@ function closeOverlay(e) {
 }
 
 /* ============================================================
-   Detalle de proyectos (integrado en la misma página, sin
-   navegar a archivos .html independientes ni recargar nada)
-   ============================================================ */
+   Detalle de proyectos integrado*/
 const projectsData = {
   nlp: {
-    name: "Motor de Análisis de Sentimientos y Clasificación de Textos",
-    date: "Agosto 2026",
+    name: "Motor de Inteligencia Operacional y NLP para Sector Financiero", 
+    date: "2025",
     category: "ml",
-    categoryLabel: "Machine Learning",
-    stack: ["Python", "Transformers", "Hugging Face", "Azure AI", "FastAPI", "Docker"],
-    hero: "Static/images/nlp-bg.jpg",
-    heroFallback: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&q=80&w=1200",
+    categoryLabel: "Machine Learning & NLP",
+    stack: ["Python", "PyTorch", "Transformers", "AWS SageMaker", "PySpark", "FastAPI"], 
     sections: [
       {
         heading: "Contexto y Desafío",
         paragraphs: [
-          "Con el crecimiento exponencial de las interacciones digitales de los usuarios, los equipos de soporte y análisis enfrentan el reto de procesar grandes volúmenes de texto no estructurado. El objetivo de este proyecto fue diseñar e implementar un sistema inteligente capaz de interpretar automáticamente tickets de servicio, correos y comentarios, categorizando cada mensaje y extrayendo el sentimiento subyacente (positivo, neutro, negativo) para priorizar la atención al cliente de manera dinámica.",
+          "Una entidad financiera requería optimizar el procesamiento y clasificación de las comunicaciones de sus clientes, ya que el proceso tradicional de categorización (Peticiones, Quejas, Reclamos y Solicitudes - PQRS) resultaba insuficiente para aprovechar el valor de la información en texto libre.[cite: 5]",
+          "El objetivo principal fue diseñar una solución de Procesamiento de Lenguaje Natural (PLN) para extraer inteligencia operacional y de negocio.[cite: 5] La solución debía interpretar intenciones, sentimientos, emociones, entidades relevantes, señales asociadas a fraude o seguridad y riesgo de abandono, enfrentándose al desafío de procesar lenguaje no estructurado con terminología del sector financiero y manteniendo mecanismos de control sobre información sensible.[cite: 5]"
         ],
       },
       {
         heading: "Arquitectura y Solución Técnica",
         paragraphs: [
-          "El núcleo del motor predictivo se construyó utilizando modelos avanzados de procesamiento de lenguaje natural basados en la arquitectura Transformer. Específicamente, se realizó un proceso de fine-tuning sobre un modelo base de Hugging Face, entrenándolo con un corpus de datos históricos etiquetados del negocio.",
-          "Para asegurar la escalabilidad y disponibilidad de las predicciones en tiempo real, el modelo se expuso a través de una API RESTful desarrollada con FastAPI. Toda la solución se empaquetó en contenedores Docker y se orquestó utilizando los servicios de Azure AI, permitiendo una integración fluida con los pipelines de datos existentes y herramientas de Business Intelligence (BI) para el monitoreo de las métricas obtenidas.",
+          "Se diseñó una arquitectura de procesamiento de lenguaje basada en Python, donde los correos ingresan a un pipeline para realizar preprocesamiento, extracción de características, inferencia mediante modelos de NLP y generación de atributos estructurados.[cite: 5]",
+          "El flujo se estructura en las siguientes etapas:[cite: 5]",
+          "<!-- Imagen del flujo insertada en el orden del documento -->",
+          "<img src='Static/Projects/FlujoNLP_financiero.jpg' alt='Flujo de la arquitectura NLP' style='width: 100%; max-width: 800px; border-radius: 12px; margin: 15px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.3);'>",
+          "Inicia con la normalización del contenido y la clasificación automática de las comunicaciones (tipología PQRS e intención).[cite: 5] Seguidamente, se integra un análisis de sentimiento y emoción, y una extracción automática de entidades (NER) para identificar montos, fechas, productos y canales.[cite: 5]",
+          "La arquitectura también incorpora la detección temprana de eventos asociados a fraude, una capa de enriquecimiento mediante topic modeling y clustering para análisis de causa raíz, y modelos predictivos para identificar la intención y el riesgo de abandono (churn).[cite: 5] Finalmente, utiliza un módulo de Next Best Action con modelos de lenguaje (LLM) para sugerir borradores de respuesta al analista y aplica controles de compliance y calidad.[cite: 5]"
         ],
       },
       {
         heading: "Impacto y Resultados",
         paragraphs: [
-          "La implementación de esta solución de IA automatizó el 85% del triaje manual inicial de comunicaciones. Además, al integrar la inferencia del modelo directamente en los tableros analíticos, se habilitó la detección temprana de anomalías en la satisfacción del cliente, permitiendo respuestas proactivas ante picos de sentimientos negativos.",
+          "La solución permitió evolucionar de una clasificación manual a un esquema de inteligencia automatizada sobre las comunicaciones, transformando los correos en atributos estructurados listos para ser utilizados por los procesos operativos.[cite: 5]",
+          "Se mejoró significativamente el direccionamiento automático de los casos y se establecieron mecanismos de priorización temprana para alertas de fraude y seguridad.[cite: 5] Además, el análisis de tópicos facilitó la detección de fallas recurrentes, mientras que la predicción de churn abrió la puerta a estrategias de retención proactivas, convirtiendo un canal tradicional en una potente fuente de inteligencia operacional.[cite: 5]"
         ],
       },
     ],
