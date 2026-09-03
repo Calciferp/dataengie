@@ -12,11 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
-    <!-- Header -->
-<header class="ui-element">
+    <header class="ui-element">
     <div class="brand-container">
         <div class="logo">Ingeniería & Data BI</div>
         <div class="subtitle">Luis Felipe Tamayo C.</div>
@@ -42,7 +40,6 @@
 <div class="slider-wrapper">
     <div class="slider-container" id="slider">
 
-    <!-- Slide 1: Data Pipelines -->
     <div class="slide active" data-index="0">
         <div class="bg-layer background-layer">
             <img src="Static/images/pipelines-bg.jpg" alt="Data Pipelines">
@@ -54,7 +51,6 @@
         </div>
     </div>
 
-    <!-- Slide 2: Data Warehousing -->
     <div class="slide" data-index="1">
         <div class="bg-layer background-layer">
             <img src="Static/images/warehouse-bg.jpg" alt="Data Warehousing">
@@ -66,7 +62,6 @@
         </div>
     </div>
 
-    <!-- Slide 3: Data Lake -->
     <div class="slide" data-index="2">
         <div class="bg-layer background-layer">
             <img src="Static/images/datalakehouse-bg.jpg" alt="Data Lake">
@@ -78,7 +73,6 @@
         </div>
     </div>
 
-    <!-- Slide 4: Business Intelligence -->
     <div class="slide" data-index="3">
         <div class="bg-layer background-layer">
             <img src="Static/images/dashboards-bg.jpg" alt="Business Intelligence">
@@ -90,7 +84,6 @@
         </div>
     </div>
 
-    <!-- Slide 5: Data Quality -->
     <div class="slide" data-index="4">
         <div class="bg-layer background-layer">
             <img src="Static/images/quality-bg.jpg" alt="Data Quality">
@@ -102,7 +95,6 @@
         </div>
     </div>
 
-    <!-- Slide 6: Machine Learning -->
     <div class="slide" data-index="5">
         <div class="bg-layer background-layer">
             <img src="Static/images/ml-bg.jpg" alt="Machine Learning">
@@ -114,7 +106,6 @@
         </div>
     </div>
 
-    <!-- Slide 7: IA & NLP -->
     <div class="slide" data-index="6">
         <div class="bg-layer background-layer">
             <img src="Static/images/nlp-bg.jpg" alt="Modelos de IA">
@@ -126,7 +117,6 @@
         </div>
     </div>
 
-    <!-- Slide 8: Advanced Analytics -->
     <div class="slide" data-index="7">
         <div class="bg-layer background-layer">
             <img src="Static/images/predictive-bg.jpg" alt="Análisis Avanzado">
@@ -138,7 +128,6 @@
         </div>
     </div>
 
-    <!-- Slide 9: Data Integration -->
     <div class="slide" data-index="8">
         <div class="bg-layer background-layer">
             <img src="Static/images/api-bg.jpg" alt="Data Integration">
@@ -165,23 +154,16 @@
         <span class="dot" data-slide="8"></span>
     </div>
 
-    </div> <!-- Cierre de slider-container -->
-</div> <!-- Cierre de slider-wrapper -->
-
-
-    <!-- Play/Pause Button -->
-    <button class="play-pause-btn ui-element" id="playPauseBtn" aria-label="Play/Pause Slideshow">
+    </div> </div> <button class="play-pause-btn ui-element" id="playPauseBtn" aria-label="Play/Pause Slideshow">
         <svg viewBox="0 0 24 24">
             <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
         </svg>
     </button>
 
-    <!-- Progress Bar -->
     <div class="progress-bar-container ui-element">
         <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <!-- Duration Controls -->
     <div class="duration-controls ui-element">
         <button class="duration-btn" id="decreaseDuration" aria-label="Decrease Duration">−</button>
         <div class="duration-display" id="durationDisplay">8<span>s</span></div>
@@ -193,50 +175,46 @@
             <button class="close-btn" onclick="closeOverlay('about')">×</button>
             <h2>Acerca de</h2>
             <p>Este sitio hace parte del perfil profesional de <strong>Felipe Tamayo — Ingeniero Electrónico en Automatización, especialista en Datos y candidato a Máster en Ciencia de Datos.</strong></p>
-            <p><strong>Sobre mi:</strong> Tengo experiencia en las áreas de <strong>Ingeniería de Datos, Ciencia de Datos y Business Intelligence</strong>, participo en proyectos de integración y transformación de datos, construcción de pipelines y Data Warehouses, analítica avanzada, machine learning, automatización y desarrollo de soluciones analíticas sobre ecosistemas <strong>Azure y AWS</strong>.</p>
-            <p>Mi modo de trabajo es flexible, sin embargo, normalmente lo hago bajo un <strong>enfoque orientado a proyectos</strong>, tanto para organizaciones en Colombia como para iniciativas internacionales, colaborando con empresas, equipos multidisciplinarios y clientes bajo diferentes modalidades. También estoy disponible para <strong>proyectos independientes y colaborativos</strong> incluyendo investigación aplicada, despliegue de soluciones, automatización y asesoría técnica.</p>
+            <p><strong>Sobre mi:</strong> Tengo experiencia en las áreas de <strong>Ingeniería de Datos, Ciencia de Datos y Business Intelligence</strong>, participo en proyectos de integración y transformación de datos, construcción de pipelines, analítica avanzada, machine learning, automatización y desarrollo de soluciones analíticas sobre ecosistemas <strong>Azure y AWS</strong>.</p>
+            <p>Trabajo de manera flexible, sin eximir contrato directo. De manera habitual lo hago bajo un <strong>enfoque orientado a proyectos</strong>, tanto para organizaciones como para iniciativas dentro y fuera de Colombia, colaborando con empresas, equipos multidisciplinarios y clientes bajo diferentes modalidades. También estoy disponible para <strong>proyectos independientes y colaborativos</strong> incluyendo investigación aplicada, despliegue de soluciones, automatización y asesoría técnica.</p>
             <p>Si visitaste el sitio antes y buscas alguno de los proyectos, es posible que encuentres limitado acceso al <strong>Git.</strong> Debido a la migración de GitLab hacia GitHub se está haciendo una revisión y actualización, posteriormente se estará restableciendo el acceso.</p>
         </div>
     </div>
 
-    <!-- Projects Overlay -->
     <div class="overlay" id="projectsOverlay">
         <div class="overlay-content" id="projectsOverlayContent">
             <button class="close-btn" onclick="closeOverlay('projects')">×</button>
 
-            <!-- Vista de lista de proyectos -->
             <div id="projectsListView">
                 <h2>Proyectos</h2>
 
-                <!-- Tarjeta del Proyecto NLP -->
-                <div class="testimonial-card">
+                <div class="project-card">
                     <h3 style="color: #f8fafc; margin-bottom: 10px;">Motor de Inteligencia Operacional y NLP Financiero</h3>
-                    <p>Solución basada en Procesamiento de Lenguaje Natural (PLN) para extraer inteligencia accionable de correos electrónicos, identificando sentimientos, entidades, fraude y riesgo de abandono de clientes en el sector financiero.[cite: 5]</p>
+                    <p>Solución basada en Procesamiento de Lenguaje Natural (PLN) para extraer inteligencia accionable de correos electrónicos, identificando sentimientos, entidades, fraude y riesgo de abandono.</p>
                     <a onclick="showProjectDetail('nlp')" class="ampliar-btn">Ampliar</a>
                 </div>
 
-                <!-- Tarjeta Proyecto 2 (Ejemplo de relleno) -->
-                <div class="testimonial-card">
-                    <h3 style="color: #f8fafc; margin-bottom: 10px;">Data Lakehouse en Azure</h3>
-                    <p>Diseño y construcción de una arquitectura Medallion (Bronce, Plata, Oro) utilizando Azure Databricks y Delta Lake para el manejo de más de 100 TB de datos mensuales.</p>
-                    <a onclick="showProjectDetail('lakehouse')" class="ampliar-btn">Ampliar</a>
+                <div class="project-card">
+                    <h3 style="color: #f8fafc; margin-bottom: 10px;">Plataforma Predictiva Agro-Climática en AWS</h3>
+                    <p>Sistema de decisión agrícola basado en Data Engineering y Machine Learning para proyectar favorabilidad de cultivos integrando variables hídricas, meteorológicas y económicas.</p>
+                    <a onclick="showProjectDetail('agro')" class="ampliar-btn">Ampliar</a>
                 </div>
 
-                <!-- Tarjeta Proyecto 3 (Ejemplo de relleno) -->
-                <div class="testimonial-card">
-                    <h3 style="color: #f8fafc; margin-bottom: 10px;">Automatización de Pipelines ETL/ELT</h3>
-                    <p>Orquestación de flujos de datos complejos integrando múltiples APIs REST con bases de datos y plataformas de BI utilizando Microsoft Fabric y Azure Data Factory.</p>
-                    <a onclick="showProjectDetail('etl')" class="ampliar-btn">Ampliar</a>
+                <div class="project-card">
+                    <h3 style="color: #f8fafc; margin-bottom: 10px;">Plataforma de analítica de contratación pública y minería de datos sobre SECOP II</h3>
+                    <p>Plataforma de Data Engineering y NLP sobre los datos abiertos de SECOP II para identificar quién contrata, quién gana los contratos, cuánto se invierte y qué tecnologías demanda el Estado colombiano.</p>
+                    <a onclick="showProjectDetail('secop')" class="ampliar-btn">Ampliar</a>
                 </div>
+
             </div>
 
-            <!-- Vista de detalle de proyecto (se llena dinámicamente) -->
             <div id="projectDetailView" class="project-detail-view">
                 <button class="back-to-projects" onclick="backToProjects()">← Volver a proyectos</button>
 
                 <div class="project-detail-grid">
                     <div class="project-detail-main">
                         <img id="pdHero" class="project-hero-img" src="" alt="">
+                        <h2 id="pdMainTitle" style="display: none; color: #f8fafc; font-size: 2.2rem; margin-bottom: 20px;"></h2>
                         <div id="pdSections"></div>
                     </div>
 
@@ -254,7 +232,6 @@
         </div>
     </div>
 
-    <!-- Contact Overlay -->
     <div class="overlay" id="contactOverlay">
         <div class="overlay-content">
             <button class="close-btn" onclick="closeOverlay('contact')">×</button>
@@ -287,7 +264,11 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <div id="lightboxOverlay" class="lightbox-overlay" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImage" src="" alt="Vista ampliada">
+    </div>
+
     <footer class="ui-element">
         <p>Todos los derechos reservados © 2026</p>
     </footer>

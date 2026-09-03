@@ -813,7 +813,7 @@ nav a::after {
 }
 
 /* Testimonial Cards */
-.testimonial-card {
+.project-card {
 	background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%);
 	padding: 35px;
 	border-radius: 18px;
@@ -825,7 +825,7 @@ nav a::after {
 	box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.testimonial-card::before {
+.project-card::before {
 	content: '"';
 	position: absolute;
 	top: -10px;
@@ -837,14 +837,14 @@ nav a::after {
 	pointer-events: none;
 }
 
-.testimonial-card:hover {
+.project-card:hover {
 	transform: translateY(-5px);
 	background: linear-gradient(135deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.1) 100%);
 	box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
 	border-left-color: #fff;
 }
 
-.testimonial-card p {
+.project-card p {
 	font-style: italic;
 	margin-bottom: 18px;
 	color: #f0f0f0;
@@ -854,11 +854,11 @@ nav a::after {
 	font-weight: 400;
 }
 
-.testimonial-card p::before {
+.project-card p::before {
 	display: none;
 }
 
-.testimonial-card .author {
+.project-card .author {
 	color: rgba(255, 255, 255, 0.85);
 	font-size: 0.95rem;
 	font-style: normal;
@@ -867,7 +867,7 @@ nav a::after {
 	letter-spacing: 0.5px;
 }
 
-.testimonial-card .author::before {
+.project-card .author::before {
 	content: '— ';
 
 	color: rgba(255, 255, 255, 0.6);
@@ -1118,7 +1118,7 @@ footer a:hover {
 		font-size: 2.2rem;
 	}
 
-	.testimonial-card {
+	.project-card {
 		padding: 28px;
 	}
 
@@ -1129,7 +1129,7 @@ footer a:hover {
 }
 
 /* Estilos para las tarjetas de proyectos y el botón "Ampliar" */
-.testimonial-card {
+.project-card {
     position: relative;
     padding-bottom: 60px; /* Asegura que el texto no se superponga con el botón */
 }
@@ -1325,12 +1325,12 @@ footer a:hover {
 		font-size: 1rem;
 	}
 
-	.testimonial-card {
+	.project-card {
 		padding: 25px;
 		margin-bottom: 25px;
 	}
 
-	.testimonial-card::before {
+	.project-card::before {
 		font-size: 80px;
 	}
 
@@ -1420,12 +1420,12 @@ footer a:hover {
 		padding-left: 15px;
 	}
 
-	.testimonial-card {
+	.project-card {
 		padding: 20px;
 		margin-bottom: 20px;
 	}
 
-	.testimonial-card::before {
+	.project-card::before {
 		font-size: 60px;
 		left: 10px;
 	}
@@ -1628,4 +1628,70 @@ footer a:hover {
 	.project-detail-sidebar {
 		position: static;
 	}
+}
+
+/* ============================================================
+   Estilos Adicionales: Imágenes de Proyectos y Lightbox
+   ============================================================ */
+
+/* Indica al usuario que la imagen se puede ampliar */
+.zoomable-image {
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoomable-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.2) !important;
+}
+
+/* Visor de imágenes a pantalla completa */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(10px);
+    z-index: 3000;
+    display: none; /* Oculto por defecto */
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.lightbox-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.lightbox-overlay.active img {
+    transform: scale(1);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.lightbox-close:hover {
+    color: white;
+    transform: scale(1.1);
 }
