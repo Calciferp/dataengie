@@ -177,7 +177,7 @@ const projectsData = {
   },
   agro: {
     name: "Plataforma predictiva para selección de cultivos y riesgo agrícola",
-    date: "Octubre 2025",
+    date: "Marzo 2026",
     category: "data",
     categoryLabel: "Data Engineering & ML",
     stack: ["AWS", "Amazon S3", "AWS Glue", "Amazon SageMaker", "PySpark", "Apache Airflow", "FastAPI", "Python"],
@@ -409,7 +409,7 @@ async function handleSubmit(e) {
         }
     } catch (error) {
         console.error('Error:', error);
-        alert("No se pudo conectar con el servidor. Intenta enviarme un correo directamente a tamayoc.felipe@gmail.com.");
+        alert("No se pudo conectar con el servidor. Intenta enviarme un correo directamente a felipetamayo@dataengie.com.");
     } finally {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
